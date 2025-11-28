@@ -17,3 +17,51 @@
 }
 
 /* || Main Styling */
+
+/* Default Styling =  Mobile Screen Size */
+
+/* Header */
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.header-btn {
+    background-color: var(--grey200);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    padding: 1rem;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.header-btn:hover {
+    background-color: var(--blue900);
+    color: var(--white);
+}
+
+.header-btn:focus {
+    outline: 0.1rem solid var(--blue900);
+    outline-offset: 0.2rem;
+}
+
+/* Tablet Screen Size */
+
+@media screen and (min-width: 48rem) {
+    header {
+        padding: 1.8rem 2rem;
+    }
+}
+
+/* Desktop Screen Size */
+
+@media screen and (min-width: 61.25rem) {
+    header {
+        padding: 1.8rem 10rem;
+    }
+}
