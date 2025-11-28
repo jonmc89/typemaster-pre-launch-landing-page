@@ -20,12 +20,17 @@
 
 /* Default Styling =  Mobile Screen Size */
 
+main {
+    position: relative;
+}
+
 /* Header */
 
 header {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin-block-end: 2.5rem;
     padding: 1rem;
 }
 
@@ -63,5 +68,152 @@ header {
 @media screen and (min-width: 61.25rem) {
     header {
         padding: 1.8rem 10rem;
+    }
+}
+
+/* Hero Section */
+
+.hero-section {
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+}
+
+.hero-text-container {
+    margin-block-end: 4rem;
+    padding: 0 1rem;
+}
+
+.hero-title {
+    color: var(--blue900);
+    font-size: 3rem;
+    font-weight: 800;
+    margin-block-end: 1.5rem;
+}
+
+.hero-sub-text {
+    color: var(--blue400);
+    line-height: 150%;
+    font-weight: 500;
+    margin-block-end: 2rem;
+}
+
+.hero-btn-container {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.hero-btn {
+    background-color: var(--orange500);
+    border: none;
+    border-radius: 0.5rem;
+    color: var(--white);
+    cursor: pointer;
+    font-weight: 700;
+    padding: 1rem;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.hero-btn:hover {
+    background-color: var(--orange300);
+}
+
+.hero-btn:focus {
+    outline: 0.1rem solid var(--orange500);
+    outline-offset: 0.2rem;
+}
+
+.release-date {
+    color: var(--blue400);
+    font-weight: 700;
+}
+
+.hero-img-container {
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+}
+
+.hero-img-keyboard-mobile {
+    border-radius: 1rem;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: -4rem;
+    width: 29rem;
+    object-fit: cover;
+}
+
+.hero-img-keyboard-tablet {
+    border-radius: 1rem;
+    display: none;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: -4rem;
+    width: 29rem;
+    object-fit: cover;
+}
+
+.hero-img-keyboard-desktop {
+    border-radius: 1rem;
+    display: none;
+    height: auto;
+    width: 33rem;
+}
+
+.hero-shape {
+    background-color: var(--grey200);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    display: none;
+    height: 12rem;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    width: 10%;
+}
+
+/* Tablet Screen Size */
+
+@media screen and (min-width: 48rem) {
+    .hero-section {
+        display: grid;
+        grid-template: 1fr / repeat(2, 1fr);
+    }
+
+    .hero-text-container {
+        align-self: center;
+        padding-left: 2rem;
+    }
+
+    .hero-img-keyboard-mobile {
+        display: none;
+    }
+
+    .hero-img-keyboard-tablet {
+        display: block;
+    }
+}
+
+/* Desktop Screen Size */
+
+@media screen and (min-width: 61.25rem) {
+    .hero-section {
+        padding: 0 10rem;
+    }
+    .hero-btn-container {
+        padding-left: 0;
+    }
+
+    .hero-img-keyboard-tablet {
+        display: none;
+    }
+
+    .hero-img-keyboard-desktop {
+        display: block;
+    }
+
+    .hero-shape {
+        display: block;
     }
 }
