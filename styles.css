@@ -57,7 +57,7 @@ header {
 
 /* Tablet Screen Size */
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 51.25rem) {
     header {
         padding: 1.8rem 2rem;
     }
@@ -75,6 +75,7 @@ header {
 
 .hero-section {
     font-family: "Barlow", Arial, Helvetica, sans-serif;
+    margin-block-end: 2rem;
 }
 
 .hero-text-container {
@@ -170,14 +171,15 @@ header {
     padding: 1rem;
     position: absolute;
     right: 0;
-    width: 12%;
+    width: 10%;
 }
 
 /* Tablet Screen Size */
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 51.25rem) {
     .hero-section {
         display: grid;
+        gap: 5rem;
         grid-template: 1fr / repeat(2, 1fr);
     }
 
@@ -192,6 +194,8 @@ header {
 
     .hero-img-keyboard-tablet {
         display: block;
+        object-fit: contain;
+        transform: translatex(4rem);
     }
 }
 
@@ -201,8 +205,13 @@ header {
     .hero-section {
         padding: 0 10rem;
     }
+
     .hero-btn-container {
         padding-left: 0;
+    }
+
+    .hero-img-container {
+        overflow: unset;
     }
 
     .hero-img-keyboard-tablet {
@@ -214,6 +223,164 @@ header {
     }
 
     .hero-shape {
+        display: block;
+    }
+}
+
+/* Image Section */
+
+.image-section {
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.image-section-img-container {
+    height: auto;
+    margin-block-end: 4rem;
+}
+
+.image-section-wrapper {
+    align-items: center;
+    height: auto;
+    display: flex;
+    gap: 1.5rem;
+    transform: translatex(-2rem);
+}
+
+.orange-overlay-container {
+    border-radius: 1rem;
+    position: relative;
+}
+
+.overlay {
+    background-color: var(--orange500);
+    border-radius: 1rem;
+    height: 100%;
+    opacity: 0.7;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+
+.image-section-img-1-mobile,
+.image-section-img-2-mobile {
+    border-radius: 1rem;
+    height: 14rem;
+    width: auto;
+}
+
+.image-section-img-1-tablet,
+.image-section-img-2-tablet {
+    border-radius: 1rem;
+    display: none;
+    height: 22rem;
+    width: auto;
+}
+
+.image-section-img-1-desktop,
+.image-section-img-2-desktop {
+    border-radius: 1rem;
+    display: none;
+    height: 26rem;
+    width: auto;
+}
+
+.image-section-text-container {
+    padding: 0 1rem;
+}
+
+.image-section-title {
+    color: var(--blue900);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-block-end: 1.5rem;
+    padding-right: 6rem;
+}
+
+.image-section-sub-text {
+    color: var(--blue400);
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.image-section-shape {
+    background-color: var(--grey200);
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    display: none;
+    height: 12rem;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    width: 10%;
+}
+
+/* Tablet Screen Size */
+
+@media screen and (min-width: 51.25rem) {
+    .image-section-wrapper {
+        padding: 0 2rem;
+        transform: translateX(0);
+    }
+
+    .image-section-img-container {
+        margin-block-end: 1.5rem;
+    }
+
+    .image-section-img-1-mobile,
+    .image-section-img-2-mobile {
+        display: none;
+    }
+
+    .image-section-img-1-tablet,
+    .image-section-img-2-tablet {
+        display: block;
+    }
+
+    .image-section-text-container {
+        display: flex;
+        justify-content: start;
+        gap: 5rem;
+        padding: 0 2rem;
+    }
+
+    .image-section-title {
+        padding: 0;
+    }
+
+    .image-section-sub-text {
+        padding: 0 4rem 0 0;
+        width: auto;
+    }
+}
+
+/* Desktop Screen Size */
+
+@media screen and (min-width: 61.25rem) {
+    .image-section {
+        display: flex;
+        padding: 0 10rem;
+    }
+
+    .image-section-img-1-tablet,
+    .image-section-img-2-tablet {
+        display: none;
+    }
+
+    .image-section-img-1-desktop,
+    .image-section-img-2-desktop {
+        display: block;
+    }
+
+    .image-section-text-container {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .image-section-shape {
         display: block;
     }
 }
