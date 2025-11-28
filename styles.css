@@ -232,6 +232,7 @@ header {
 .image-section {
     font-family: "Barlow", Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+    margin-block-end: 4rem;
     position: relative;
 }
 
@@ -382,5 +383,57 @@ header {
 
     .image-section-shape {
         display: block;
+    }
+}
+
+/* Features Section */
+
+.features-section {
+    display: grid;
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    grid-template: auto / 1fr;
+    gap: 2.5rem;
+    margin-block-end: 4rem;
+    padding: 0 1rem;
+}
+
+.icon-box {
+    align-items: center;
+    background-color: var(--orange500);
+    border-radius: 1rem;
+    display: flex;
+    height: 4rem;
+    justify-content: center;
+    margin-block-end: 2rem;
+    width: 4rem;
+}
+
+h3 {
+    color: var(--blue900);
+    font-size: 1.5rem;
+    margin-block-end: 1rem;
+}
+
+.article-text {
+    color: var(--blue400);
+    font-weight: 500;
+    line-height: 150%;
+}
+
+/* Tablet Screen Size */
+
+@media screen and (min-width: 51.25rem) {
+    .features-section {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+        padding: 0 1.5rem;
+    }
+}
+
+/* Desktop Screen Size */
+
+@media screen and (min-width: 61.25rem) {
+    .features-section {
+        grid-template: 1fr / repeat(4, 1fr);
+        padding: 0 10rem;
     }
 }
