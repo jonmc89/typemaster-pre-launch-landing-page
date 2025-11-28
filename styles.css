@@ -437,3 +437,12 @@ h3 {
         padding: 0 10rem;
     }
 }
+
+/* Footer */
+
+footer {
+    color: var(--blue400);
+    font-family: "Barlow", Arial, Helvetica, sans-serif;
+    padding: 2rem;
+    text-align: center;
+}
