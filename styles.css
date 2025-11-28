@@ -1,0 +1,19 @@
+/* || Global Styles */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colours */
+    --blue900: #162542;
+    --blue400: #5d6d8f;
+    --grey200: #e8eff2;
+    --white: #fff;
+    --orange500: #f16718;
+    --orange300: #ff9b62;
+}
+
+/* || Main Styling */
